@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Doe - Portfolio</title>
+    <title>Dynamic Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>John Doe</h1>
-        <p>Web Developer | Programmer | Designer</p>
+        <h1>My Portfolio</h1>
+        <p>Enter your details below to generate your portfolio dynamically.</p>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -20,48 +20,60 @@
         </nav>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a passionate web developer with experience in building dynamic and responsive websites. My expertise includes HTML, CSS, JavaScript, and frameworks like React and Node.js. I love creating engaging, user-friendly web applications that solve real-world problems.</p>
-    </section>
+    <main>
+        <!-- Form Section to Enter Details -->
+        <section id="form-section">
+            <h2>Enter Your Details</h2>
+            
+            <form id="portfolioForm">
+                <h3>About Me</h3>
+                <textarea id="aboutInput" placeholder="Write something about yourself..."></textarea>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Portfolio Website</h3>
-            <p>A personal portfolio website showcasing my work, achievements, and contact information. Designed using HTML, CSS, and JavaScript.</p>
-        </div>
-        <div class="project">
-            <h3>E-Commerce Platform</h3>
-            <p>Developed a complete e-commerce platform with a shopping cart, product catalog, and checkout features. Used React for the frontend and Node.js with MongoDB for the backend.</p>
-        </div>
-        <div class="project">
-            <h3>Weather App</h3>
-            <p>A real-time weather application that fetches data from a public API and displays current weather conditions. Built using JavaScript and styled with CSS.</p>
-        </div>
-    </section>
+                <h3>Projects</h3>
+                <input type="text" id="projectNameInput" placeholder="Project Name">
+                <textarea id="projectDescriptionInput" placeholder="Project Description"></textarea>
+                <button type="button" onclick="addProject()">Add Project</button>
+                
+                <h3>Achievements</h3>
+                <textarea id="achievementsInput" placeholder="Enter your achievements..."></textarea>
 
-    <section id="achievements">
-        <h2>Achievements</h2>
-        <ul>
-            <li>Completed Full-Stack Web Development Certification from XYZ Academy</li>
-            <li>Won 1st place in a local hackathon for developing a smart city app</li>
-            <li>Received Employee of the Month award at ABC Company for outstanding performance</li>
-        </ul>
-    </section>
+                <h3>Contact Details</h3>
+                <input type="text" id="emailInput" placeholder="Email">
+                <input type="text" id="linkedinInput" placeholder="LinkedIn URL">
+                <input type="text" id="githubInput" placeholder="GitHub URL">
+                
+                <button type="button" onclick="generatePortfolio()">Generate Portfolio</button>
+            </form>
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: johndoe@example.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/johndoe" target="_blank">linkedin.com/in/johndoe</a></p>
-        <p>GitHub: <a href="https://github.com/johndoe" target="_blank">github.com/johndoe</a></p>
-    </section>
+        <!-- Displayed Portfolio Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p id="aboutText">[Your details will appear here]</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div id="projectsList"></div>
+        </section>
+
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <p id="achievementsText">[Your achievements will appear here]</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p id="emailText">Email: [Your email will appear here]</p>
+            <p id="linkedinText">LinkedIn: <a href="#" id="linkedinLink" target="_blank">[Link]</a></p>
+            <p id="githubText">GitHub: <a href="#" id="githubLink" target="_blank">[Link]</a></p>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 John Doe. All Rights Reserved.</p>
+        <p>&copy; 2024 My Portfolio</p>
     </footer>
 
-    <!-- Add the JavaScript file here -->
     <script src="scripts.js"></script>
 </body>
 </html>
